@@ -71,7 +71,7 @@ func ParseCdr(content []byte) *ThreegppCdr {
 	file := NewThreegppCdr()
 	err := file.Read(kaitai.NewStream(bytes.NewReader(content)), nil, file)
 	if err != nil {
-		fmt.Printf("Failed to parse CDR file: %v", err)
+		fmt.Println("Failed to parse CDR file.")
 		os.Exit(2)
 	}
 	return file
