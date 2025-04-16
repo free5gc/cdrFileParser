@@ -21,8 +21,12 @@ import (
 	"io"
 	"log"
 	"os"
+	"reflect"
 	"strconv"
 
+	"github.com/davecgh/go-spew/spew"
+	"github.com/free5gc/chf/cdr/asn"
+	"github.com/free5gc/chf/cdr/cdrType"
 	"github.com/kaitai-io/kaitai_struct_go_runtime/kaitai"
 	"github.com/mikefarah/yq/v4/pkg/yqlib"
 	"gopkg.in/op/go-logging.v1"
@@ -107,11 +111,13 @@ func CountCdrs(content []byte) uint32 {
 
 func DumpCdr(content []byte, index uint32, file *os.File) {
 	row := getCdrContent(content, index)
-	_, err := file.Write(row.CdrContent)
+	val := reflect.New(reflect.TypeOf(&cdrType.ChargingRecord{}).Elem()).Interface()
+	err := asn.UnmarshalWithParams(row.CdrContent, val, "")
 	if err != nil {
-		fmt.Println("Error dumping CDR:", err)
+		fmt.Println("Error unmarshalling CDR content:", err)
 		os.Exit(4)
 	}
+	spew.Dump(val)
 }
 
 func ToCdrInfo(content []byte) CdrInfo {
