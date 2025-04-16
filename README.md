@@ -2,39 +2,19 @@
 
 `tttns` is a command-line interface (CLI) tool designed to inspect 3GPP TS 32.297 CDR (Charging Data Record) files. The name "tttns" is derived from the first letters of "32297".
 
+> Thanks to [Hao Li](https://github.com/haoli000) for the inspiration and initial implementation of this tool. The project has been developed to provide a user-friendly interface for working with CDR files, making it easier to extract and analyze data.
+
 ## Installation
 
-### Install Script
-
-Download `tttns` and install into a local bin directory.
-
-#### MacOS, Linux, WSL
-
-Latest version:
-
-```bash
-curl -L https://raw.githubusercontent.com/haoli000/tttns/main/generated/install.sh | bash
 ```
-
-Specific version:
-
-```bash
-curl -L https://raw.githubusercontent.com/haoli000/tttns/main/generated/install.sh | bash -s 0.0.4
+go install main.go
 ```
-
-The script will install the binary into `$HOME/bin` folder by default, you can override this by setting
-`$CUSTOM_INSTALL` environment variable
-
-### Manual download
-
-Get the archive that fits your system from the [Releases](https://github.com/haoli000/tttns/releases) page and
-extract the binary into a folder that is mentioned in your `$PATH` variable.
 
 ## Usage
 
 ```bash
-tttns [file|-] [flags]
-tttns [command]
+main [file|-] [flags]
+main [command]
 ```
 
 ## Available Commands
@@ -59,8 +39,8 @@ The `cdr` command is used to print and manipulate CDR (Charging Data Record) inf
 Usage:
 
 ```bash
-tttns cdr [file|-] [flags]
-tttns cdr [command]
+main cdr [file|-] [flags]
+main cdr [command]
 ```
 
 Flags:
@@ -73,25 +53,25 @@ Flags:
 1. **count**: Get the number of CDRs in a file
 
    ```bash
-   tttns cdr count [file|-]
+   main cdr count [file|-]
    ```
 
 2. **dump**: Dump the raw content of CDR to stdout
 
    ```bash
-   tttns cdr dump [file|-] [index|1]
+   main cdr dump [file|-] [index|1]
    ```
 
 3. **header**: Print CDR header info
 
    ```bash
-   tttns cdr header [file|-] [index|1]
+   main cdr header [file|-] [index|1]
    ```
 
 For more information about a specific subcommand, use:
 
 ```bash
-tttns cdr [subcommand] --help
+main cdr [subcommand] --help
 ```
 
 ## Examples
@@ -99,27 +79,27 @@ tttns cdr [subcommand] --help
 1. Get the number of CDRs in a file:
 
    ```bash
-   tttns cdr count example.cdr
+   main cdr count example/imsi-208930000000003.cdr
    ```
 
 2. Print CDR header info of the 1st CDR:
 
    ```bash
-   tttns cdr header example.cdr 1
-   cat example.cdr | tttns cdr header 1
+   main cdr header example/imsi-208930000000003.cdr 1
+   cat example/imsi-208930000000003.cdr | main cdr header 1
    ```
 
 3. Dump the raw content of the 2nd CDR to stdout:
 
    ```bash
-   tttns cdr dump example.cdr 2
-   cat example.cdr | tttns cdr dump 2
+   main cdr dump example/imsi-208930000000003.cdr 1
+   cat example/imsi-208930000000003.cdr | main cdr dump 1
    ```
 
 4. Print CDR header info in JSON format:
   
    ```bash
-   tttns cdr header example.cdr 1 --json
+   main cdr header example/imsi-208930000000003.cdr 1 --json
    ```
 
 ## License
