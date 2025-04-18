@@ -79,27 +79,27 @@ main cdr [subcommand] --help
 1. Get the number of CDRs in a file:
 
    ```bash
-   main cdr count example/imsi-208930000000003.cdr
+   main cdr count example/imsi-123456789012345.cdr
    ```
 
 2. Print CDR header info of the 1st CDR:
 
    ```bash
-   main cdr header example/imsi-208930000000003.cdr 1
-   cat example/imsi-208930000000003.cdr | main cdr header 1
+   main cdr header example/imsi-123456789012345.cdr 1
+   cat example/imsi-123456789012345.cdr | main cdr header 1
    ```
 
 3. Dump the raw content of the 2nd CDR to stdout:
 
    ```bash
-   main cdr dump example/imsi-208930000000003.cdr 1
-   cat example/imsi-208930000000003.cdr | main cdr dump 1
+   main cdr dump example/imsi-123456789012345.cdr 1
+   cat example/imsi-123456789012345.cdr | main cdr dump 1
    ```
 
 4. Print CDR header info in JSON format:
   
    ```bash
-   main cdr header example/imsi-208930000000003.cdr 1 --json
+   main cdr header example/imsi-123456789012345.cdr 1 --json
    ```
 
 ## License
