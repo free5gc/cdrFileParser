@@ -5,7 +5,7 @@ go 1.22.6
 require (
 	github.com/can3p/kleiner v0.0.12
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc
-	github.com/free5gc/chf v1.1.0
+	github.com/free5gc/chf v1.1.2-0.20250506123857-7d57dd2a6c79
 	github.com/kaitai-io/kaitai_struct_go_runtime v0.10.0
 	github.com/mikefarah/yq/v4 v4.44.1
 	github.com/pkg/errors v0.9.1
