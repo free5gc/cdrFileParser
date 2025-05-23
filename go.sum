@@ -22,8 +22,6 @@ github.com/elliotchance/orderedmap v1.5.1 h1:G1X4PYlljzimbdQ3RXmtIZiQ9d6aRQ3sH1n
 github.com/elliotchance/orderedmap v1.5.1/go.mod h1:wsDwEaX5jEoyhbs7x93zk2H/qv0zwuhg4inXhDkYqys=
 github.com/fatih/color v1.17.0 h1:GlRw1BRJxkpqUCBKzKOw098ed57fEsKeNjpTe3cSjK4=
 github.com/fatih/color v1.17.0/go.mod h1:YZ7TlrGPkiz6ku9fK3TLD/pl3CpsiFyu8N92HLgmosI=
-github.com/free5gc/chf v1.1.0 h1:cOHSVx7OlJzc+1oNluhhgVc4v6zTMB6GnKHnoVtD9hU=
-github.com/free5gc/chf v1.1.0/go.mod h1:KID2x7bT+xUym1helNZLhRiZHd9ub+RDliWEKK65bEM=
 github.com/free5gc/chf v1.1.2-0.20250506123857-7d57dd2a6c79 h1:aT7M68JOCpFw9oepU12g9piLWVvhpyPWYmBR9V2IhOA=
 github.com/free5gc/chf v1.1.2-0.20250506123857-7d57dd2a6c79/go.mod h1:gck+dO4T9Evj3V+SXz26ISEOBCJw1Dg48dT/hln5u3w=
 github.com/gabriel-vasile/mimetype v1.4.2 h1:w5qFW6JKBz9Y393Y4q372O9A7cUSequkh1Q7OhCmWKU=

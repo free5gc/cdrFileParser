@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/haoli000/tttns/cdr"
+	"github.com/free5gc/cdrFileParser/cdr"
 	"github.com/spf13/cobra"
 )
 

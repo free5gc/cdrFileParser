@@ -17,11 +17,11 @@ limitations under the License.
 // For an introduction to this cli tool, see the [docs].
 // To decode the dumped CDR contents, another cli tool [xchf] can be used.
 //
-// [docs]: https://github.com/haoli000/tttns/tree/main/docs
+// [docs]: https://github.com/free5gc/cdrFileParser/tree/main/docs
 // [xchf]: https://github.com/haoli000/xchf
 package main
 
-import "github.com/haoli000/tttns/cmd"
+import "github.com/free5gc/cdrFileParser/cmd"
 
 // https://goreleaser.com/cookbooks/using-main.version/
 var (

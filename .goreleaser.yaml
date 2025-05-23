@@ -24,9 +24,9 @@ builds:
       - darwin
     ldflags:
       - -X main.version={{.Version}}
-      - -X github.com/haoli000/tttns/generated/buildinfo.buildDate={{.CommitDate}}
-      - -X github.com/haoli000/tttns/generated/buildinfo.buildVersion={{.Version}}
-      - -X github.com/haoli000/tttns/generated/buildinfo.commit={{.ShortCommit}}
+      - -X github.com/free5gc/cdrFileParser/generated/buildinfo.buildDate={{.CommitDate}}
+      - -X github.com/free5gc/cdrFileParser/generated/buildinfo.buildVersion={{.Version}}
+      - -X github.com/free5gc/cdrFileParser/generated/buildinfo.commit={{.ShortCommit}}
     tags:
       - "{{.Env.BUILD_ENV}}"
 

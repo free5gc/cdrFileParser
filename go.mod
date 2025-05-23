@@ -1,4 +1,4 @@
-module github.com/haoli000/tttns
+module github.com/free5gc/cdrFileParser
 
 go 1.22.6
 

@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/haoli000/tttns/cmd"
+	"github.com/free5gc/cdrFileParser/cmd"
 	"github.com/spf13/cobra/doc"
 )
 
